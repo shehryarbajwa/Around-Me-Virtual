@@ -26,7 +26,7 @@
 		E624D80421349C6C002D6E0A /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E624D80321349C6C002D6E0A /* CollectionView.swift */; };
 		E669F39B2131ED4D00F66769 /* FacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669F39A2131ED4D00F66769 /* FacebookLoginViewController.swift */; };
 		E669F3AA21333BB000F66769 /* NSMutableArray+test.m in Sources */ = {isa = PBXBuildFile; fileRef = E669F3A921333BB000F66769 /* NSMutableArray+test.m */; };
-		E678F7C1212F3473007D5DC5 /* InstagramImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678F7C0212F3473007D5DC5 /* InstagramImagesViewController.swift */; };
+		E678F7C1212F3473007D5DC5 /* FlickrImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678F7C0212F3473007D5DC5 /* FlickrImagesViewController.swift */; };
 		E678F7C5212F5155007D5DC5 /* MapViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678F7C4212F5155007D5DC5 /* MapViewControllerExtensions.swift */; };
 		E6A93F0521366F6400B0B9A8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A93F0221366F6300B0B9A8 /* FBSDKCoreKit.framework */; };
 		E6A93F0621366F6400B0B9A8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A93F0321366F6300B0B9A8 /* FBSDKLoginKit.framework */; };
@@ -83,7 +83,7 @@
 		E669F39A2131ED4D00F66769 /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
 		E669F3A821333BB000F66769 /* NSMutableArray+test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+test.h"; sourceTree = "<group>"; };
 		E669F3A921333BB000F66769 /* NSMutableArray+test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+test.m"; sourceTree = "<group>"; };
-		E678F7C0212F3473007D5DC5 /* InstagramImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramImagesViewController.swift; sourceTree = "<group>"; };
+		E678F7C0212F3473007D5DC5 /* FlickrImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImagesViewController.swift; sourceTree = "<group>"; };
 		E678F7C4212F5155007D5DC5 /* MapViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerExtensions.swift; sourceTree = "<group>"; };
 		E6A93F0221366F6300B0B9A8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E6A93F0321366F6300B0B9A8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 				E6E09A31212D368B00557304 /* MapViewController.swift */,
 				E669F39A2131ED4D00F66769 /* FacebookLoginViewController.swift */,
 				E678F7C4212F5155007D5DC5 /* MapViewControllerExtensions.swift */,
-				E678F7C0212F3473007D5DC5 /* InstagramImagesViewController.swift */,
+				E678F7C0212F3473007D5DC5 /* FlickrImagesViewController.swift */,
 				E624D80521349E4C002D6E0A /* Images */,
 				E61658DC212A69C5008D895B /* PageController */,
 			);
@@ -392,7 +392,7 @@
 				E669F39B2131ED4D00F66769 /* FacebookLoginViewController.swift in Sources */,
 				E61658972127B9E7008D895B /* Rome.swift in Sources */,
 				E61658952127B9E7008D895B /* AppDelegate.swift in Sources */,
-				E678F7C1212F3473007D5DC5 /* InstagramImagesViewController.swift in Sources */,
+				E678F7C1212F3473007D5DC5 /* FlickrImagesViewController.swift in Sources */,
 				E669F3AA21333BB000F66769 /* NSMutableArray+test.m in Sources */,
 				E6E6FE77212B4E8E002ADAE1 /* GCDBlackBox.swift in Sources */,
 				E624D80421349C6C002D6E0A /* CollectionView.swift in Sources */,

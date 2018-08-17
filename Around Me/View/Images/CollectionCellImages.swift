@@ -13,7 +13,6 @@ class CustomImageView: UIImageView {
     
     func downloadImage(stringURL: String,  completionHandler: @escaping() -> Void){
         self.image = nil
-        print("applejobs")
         
         guard let url = URL(string: stringURL) else {return}
         
