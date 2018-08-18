@@ -54,6 +54,9 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
     func loadImage(page: String? = nil){
         if let annotation = annotation{
             updateButton.isEnabled = false
+            
+            //Bbox will be used to locate the existing location of the pin
+            
             let bbox =  "\(annotation.coordinate.longitude), \(annotation.coordinate.latitude), \(annotation.coordinate.longitude+1), \(annotation.coordinate.latitude+1)"
             
             FlickrClient.shared.getFlickrImages(bbox, page, { (total, photosDic, error) in
