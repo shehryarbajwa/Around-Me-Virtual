@@ -113,5 +113,44 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
         updateButton.setTitle("New Collection", for: .normal)
     }
     
+    @IBAction func updateCollectionView(_ sender: Any) {
+        if (updateButton.titleLabel?.text == "New Collection"){
+            
+            if(CoreDataManager.share.removeObjects((pin?.photo?.allObjects as! [Photos]))){
+                self.updateButton.isUserInteractionEnabled = false
+                loadNewImages()
+                self.updateButton.isUserInteractionEnabled = true
+            }
+            return
+        }
+        removeImage()
+    }
     
+    func loadNewImages(){
+        self.photos.removeAll()
+        self.collectionView.reloadData()
+        let randomPage = Int(arc4random_uniform(UInt32(20)))
+        loadImage(page: "\(randomPage)")
+    }
+    
+    func removeImage(){
+        guard let selectedIndexPaths = collectionView.indexPathsForSelectedItems else {return}
+        var selectedPhotos = [Photos]()
+        for index in selectedIndexPaths{
+            selectedPhotos.append(photos[index.item])
+            hightlightCell(index, highlighted: true)
+            collectionView.deselectItem(at: index, animated: true)
+        }
+        
+        if(CoreDataManager.share.removeObjects(selectedPhotos)){
+            guard let photosArray = pin?.photo?.allObjects as? [Photos] else {return}
+            self.photos = photosArray
+            collectionView.reloadData()
+            changeButtonLabel()
+        }
+    }
+    
+    @IBAction func returnToMapViewController(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
