@@ -9,4 +9,19 @@
 import Foundation
 import UIKit
 
-
+class CustomImageView: UIImageView {
+    
+    func downloadImage(stringURL: String,  completionHandler: @escaping() -> Void){
+        self.image = nil
+        
+        guard let url = URL(string: stringURL) else {return}
+        
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: url) else {return}
+            DispatchQueue.main.async {
+                self.image = UIImage(data: imageData)
+                completionHandler()
+            }
+        }
+    }
+}
