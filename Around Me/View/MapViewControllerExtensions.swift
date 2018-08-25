@@ -52,12 +52,7 @@ extension MapViewController{
             }
     }
     
-    func removePin(_ annotation: MKAnnotation){
-        guard let pin = getPins(annotation) else {return}
-        if (CoreDataManager.share.removeObjects([pin])){
-            mapView.removeAnnotation(annotation)
-        }
-    }
+    
     
     func getPins(_ annotation : MKAnnotation)-> Pin?{
         for pin in pins {
