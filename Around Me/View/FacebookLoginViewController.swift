@@ -94,7 +94,7 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if ((error != nil )){
-            print("hello error")
+            print(error)
         }
         else if result.isCancelled{
             self.dismiss(self)
