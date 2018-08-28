@@ -39,7 +39,24 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if let token = FBSDKAccessToken.current(){
             fetchRequest()
+            let alert = UIAlertController(title: "Logging in", message: "", preferredStyle: .alert)
+            let indicator = UIActivityIndicatorView(frame: alert.view.bounds)
+            indicator.autoresizingMask = [.flexibleWidth , .flexibleHeight]
+            indicator.activityIndicatorViewStyle = .gray
+            alert.view.addSubview(indicator)
+            indicator.isUserInteractionEnabled = false
+            indicator.startAnimating()
+            self.present(alert, animated:true)
             
+            let when = DispatchTime.now() + 2
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                alert.dismiss(animated: true, completion: { ()
+                    self.performSegue(withIdentifier: "mapview", sender: self)
+                })
+            }
+        }
+        
+    }
     
     func fetchRequest(){
         print("hello")
