@@ -87,7 +87,6 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
     func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
-        print("Hello")
         return true
     }
     
