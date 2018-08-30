@@ -63,6 +63,22 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         var parameters = ["fields": "email, first_name, last_name, location"]
         
         
+        FBSDKGraphRequest.init(graphPath: "me", parameters: parameters).start { (connection, result, error) in
+            if error != nil {
+                print(error)
+          }
+            if let result = result as? [String:String]{
+                let email : String = result["email"]!
+                print(email)
+                let firstname : String = result["first_name"]!
+                let lastname: String = result["last_name"]!
+                print(firstname)
+                print(lastname)
+            }
+            
+            
+        }
+    }
     
 
     override func didReceiveMemoryWarning() {
