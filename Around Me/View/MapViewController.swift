@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate {
-
+    //Create outlets for all buttons
     @IBOutlet weak var searchBar: UIBarButtonItem!
     
     @IBOutlet weak var stopbutton: UIBarButtonItem!
@@ -19,7 +19,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegat
     @IBOutlet weak var location: UIBarButtonItem!
     
     
-    
+    //Fetch pins from CoreData and initialize LocationManager
     var pins = [Pin]()
     var editmode = false
     var currentlocationmod = false
