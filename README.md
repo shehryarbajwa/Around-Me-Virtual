@@ -7,6 +7,8 @@ CoreLocation <br>
 SQLLite <br>
 MapKit <br>
 UICollectionView <br>
+PageView <br>
+PageViewController <br>
 
 ## Frameworks Used:
 FlickrAPI <br>
