@@ -1,0 +1,1 @@
+/Users/Shehryarbajwa/Desktop/Around me/DerivedData/Around Me/Build/Intermediates.noindex/ArchiveIntermediates/Around Me/InstallationBuildProductsLocation/Applications/Around Me.app
