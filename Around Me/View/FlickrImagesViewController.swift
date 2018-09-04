@@ -57,6 +57,18 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
     
     @IBAction func flagImage(_ sender: Any) {
         
+        let alert = UIAlertController(title: "Flag as inappropriate content", message: "", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "The content is offensive", style: .default, handler: { (UIAlertAction) in
+            let alert2 = UIAlertController(title: "Thank you for your feedback", message: "We'll take it from here", preferredStyle: .alert)
+            self.present(alert2, animated: true, completion: self.removeImage)
+            
+            let when  = DispatchTime.now() + 1
+            DispatchQueue.main.asyncAfter(deadline: when, execute: {
+                alert2.dismiss(animated: true, completion: nil)
+                self.flagButton.isEnabled = false
+            })
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     
@@ -116,6 +128,7 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
         guard let count = collectionView.indexPathsForSelectedItems?.count else {return}
         if(count > 0){
             updateButton.setTitle("Remove Selected Pictures", for: .normal)
+            flagButton.isEnabled = true
             return
         }
         
