@@ -17,6 +17,9 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
     @IBOutlet weak var mapView:MKMapView!
     @IBOutlet weak var updateButton: UIButton!
     
+    @IBOutlet weak var flagButton: UIBarButtonItem!
+    
+    
     static let shared = ImageSelectorViewController()
     
     var annotation: MKAnnotation?
@@ -30,6 +33,7 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
         super.viewDidLoad()
         mapView.delegate = self
         setUpViews()
+        flagButton.isEnabled = false
     }
     
     @IBAction func back(_ sender: Any) {
@@ -50,6 +54,11 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
             loadImage()
         }
     }
+    
+    @IBAction func flagImage(_ sender: Any) {
+        
+    }
+    
     
     func loadImage(page: String? = nil){
         if let annotation = annotation{

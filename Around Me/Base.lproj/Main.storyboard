@@ -682,9 +682,16 @@
                                 <action selector="back:" destination="Wfg-BX-lhs" id="RoI-fA-hX9"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Flag" id="2pl-Uq-G8c">
+                            <color key="tintColor" red="0.98039215690000003" green="0.55454494440000002" blue="0.51554540250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="flagImage:" destination="Wfg-BX-lhs" id="JDQ-3I-cch"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="285-7e-FPY" id="uRU-De-V5b"/>
+                        <outlet property="flagButton" destination="2pl-Uq-G8c" id="hi9-wV-VNl"/>
                         <outlet property="mapView" destination="iQv-rd-pPW" id="BxB-Zf-X6M"/>
                         <outlet property="updateButton" destination="1le-Ol-xm4" id="gtq-T3-yBi"/>
                     </connections>
