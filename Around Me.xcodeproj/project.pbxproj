@@ -24,6 +24,7 @@
 		E624D800213499EA002D6E0A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E624D7FF213499EA002D6E0A /* CollectionViewCell.swift */; };
 		E624D80221349A1D002D6E0A /* CollectionCellImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E624D80121349A1D002D6E0A /* CollectionCellImages.swift */; };
 		E624D80421349C6C002D6E0A /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E624D80321349C6C002D6E0A /* CollectionView.swift */; };
+		E654B8B8214531EB007E9A26 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E654B8B7214531EA007E9A26 /* TableView.swift */; };
 		E669F39B2131ED4D00F66769 /* FacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669F39A2131ED4D00F66769 /* FacebookLoginViewController.swift */; };
 		E669F3AA21333BB000F66769 /* NSMutableArray+test.m in Sources */ = {isa = PBXBuildFile; fileRef = E669F3A921333BB000F66769 /* NSMutableArray+test.m */; };
 		E678F7C1212F3473007D5DC5 /* FlickrImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678F7C0212F3473007D5DC5 /* FlickrImagesViewController.swift */; };
@@ -80,6 +81,7 @@
 		E624D7FF213499EA002D6E0A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E624D80121349A1D002D6E0A /* CollectionCellImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellImages.swift; sourceTree = "<group>"; };
 		E624D80321349C6C002D6E0A /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		E654B8B7214531EA007E9A26 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		E669F39A2131ED4D00F66769 /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
 		E669F3A821333BB000F66769 /* NSMutableArray+test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+test.h"; sourceTree = "<group>"; };
 		E669F3A921333BB000F66769 /* NSMutableArray+test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+test.m"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				E6E09A31212D368B00557304 /* MapViewController.swift */,
 				E669F39A2131ED4D00F66769 /* FacebookLoginViewController.swift */,
+				E654B8B7214531EA007E9A26 /* TableView.swift */,
 				E678F7C4212F5155007D5DC5 /* MapViewControllerExtensions.swift */,
 				E678F7C0212F3473007D5DC5 /* FlickrImagesViewController.swift */,
 				E624D80521349E4C002D6E0A /* Images */,
@@ -395,6 +398,7 @@
 				E678F7C1212F3473007D5DC5 /* FlickrImagesViewController.swift in Sources */,
 				E669F3AA21333BB000F66769 /* NSMutableArray+test.m in Sources */,
 				E6E6FE77212B4E8E002ADAE1 /* GCDBlackBox.swift in Sources */,
+				E654B8B8214531EB007E9A26 /* TableView.swift in Sources */,
 				E624D80421349C6C002D6E0A /* CollectionView.swift in Sources */,
 				E61658C62127BB8F008D895B /* PageViewController.swift in Sources */,
 				E624D800213499EA002D6E0A /* CollectionViewCell.swift in Sources */,

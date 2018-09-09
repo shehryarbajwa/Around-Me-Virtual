@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C1a-n1-m3x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C1a-n1-m3x">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -88,12 +88,21 @@
                                 <action selector="dismiss:" destination="LVd-Tc-KLa" id="mkv-12-cuZ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Maps" id="EVd-CR-3vW">
-                            <color key="tintColor" red="0.98039215686274506" green="0.55454494443775149" blue="0.5155454025258851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="maps:" destination="LVd-Tc-KLa" id="SWA-9l-yzR"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Maps" id="EVd-CR-3vW">
+                                <color key="tintColor" red="0.98039215686274506" green="0.55454494443775149" blue="0.5155454025258851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="maps:" destination="LVd-Tc-KLa" id="SWA-9l-yzR"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="icons8-settings-50" id="Ei8-cC-TFt">
+                                <color key="tintColor" red="0.98039215690000003" green="0.55454494440000002" blue="0.51554540250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="Legal:" destination="LVd-Tc-KLa" id="Ix2-ja-eaz"/>
+                                    <segue destination="1Qg-Lw-xPt" kind="show" identifier="seguetolegal" id="z76-AU-jh4"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -307,7 +316,7 @@
                                     <segue destination="7jR-O4-XeE" kind="show" id="8gf-H7-LRo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover your favorite photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXp-sN-4DW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drop Pins to discover your favorite photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXp-sN-4DW">
                                 <rect key="frame" x="16" y="81" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -508,6 +517,65 @@
             </objects>
             <point key="canvasLocation" x="-554" y="-528"/>
         </scene>
+        <!--Legal and Policies-->
+        <scene sceneID="ai1-fV-vHx">
+            <objects>
+                <viewController id="ihu-ch-aFD" customClass="TableViewClass" customModule="Around_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KA9-Wq-oxG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DGX-aE-e9g">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="TFD-NA-9sY">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TFD-NA-9sY" id="Zgd-Np-032">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ihu-ch-aFD" id="siu-0Z-8tP"/>
+                                    <outlet property="delegate" destination="ihu-ch-aFD" id="XcI-NU-UTy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="iIz-Kr-Jae"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Legal and Policies" id="UqG-9k-9Jv">
+                        <barButtonItem key="leftBarButtonItem" title="Maps" id="xD1-Ye-lWY">
+                            <color key="tintColor" red="0.98039215690000003" green="0.55454494440000002" blue="0.51554540250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="dismiss:" destination="ihu-ch-aFD" id="qL6-n0-geH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqN-tI-HrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384.80000000000001" y="1915.5922038980511"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RqP-AW-aOn">
+            <objects>
+                <viewController id="ssw-S2-gYh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nMv-0u-4uZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eTC-Lo-Q9I"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1H-Gc-Tkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383.2" y="1915.5922038980511"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Og-iH-zgp">
             <objects>
@@ -700,6 +768,24 @@
             </objects>
             <point key="canvasLocation" x="3348" y="1106"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sxs-WE-Ghv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Qg-Lw-xPt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pd4-nJ-T8T">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ihu-ch-aFD" kind="relationship" relationship="rootViewController" id="RKI-j9-rYV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zti-NH-oen" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-554.39999999999998" y="1915.5922038980511"/>
+        </scene>
     </scenes>
     <resources>
         <image name="London" width="167" height="305"/>
@@ -708,10 +794,11 @@
         <image name="SF" width="168" height="297"/>
         <image name="Screen Shot 2018-08-16 at 3.43.46 PM" width="1040" height="700"/>
         <image name="edit" width="36" height="36"/>
+        <image name="icons8-settings-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DuM-kZ-hYf"/>
-        <segue reference="8gf-H7-LRo"/>
+        <segue reference="qNz-cc-djM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

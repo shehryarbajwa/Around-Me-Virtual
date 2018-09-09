@@ -17,6 +17,12 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func Legal(_ sender: Any) {
+        self.performSegue(withIdentifier: "seguetolegal", sender: sender)
+    }
+    
+    
     @IBAction func maps(_ sender: Any) {
         if let token = FBSDKAccessToken.current(){
             self.performSegue(withIdentifier: "mapview", sender: self)
