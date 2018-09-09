@@ -27,6 +27,8 @@ extension FlickrClient{
         queryitems.append(URLQueryItem(name: FlickrAPI.JSONParameters.bbox, value: bbox))
         queryitems.append(URLQueryItem(name: FlickrAPI.JSONParameters.format, value: FlickrAPI.ParameterKeys.ResponseFormat))
         queryitems.append(URLQueryItem(name: FlickrAPI.JSONParameters.nojsoncallback, value: FlickrAPI.ParameterKeys.NOJSONCallback))
+        queryitems.append(URLQueryItem(name: FlickrAPI.JSONParameters.safesearch, value: FlickrAPI.ParameterKeys.Safesearch))
+        queryitems.append(URLQueryItem(name: FlickrAPI.JSONParameters.perpage, value: "20"))
         
         if (extras == true){
             queryitems.append(URLQueryItem(name: FlickrAPI.JSONParameters.extras, value: FlickrAPI.ParameterKeys.MediumURL))

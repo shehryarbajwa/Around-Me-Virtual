@@ -19,6 +19,8 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
     
     @IBOutlet weak var flagButton: UIBarButtonItem!
     
+
+    
     
     static let shared = ImageSelectorViewController()
     
@@ -57,7 +59,7 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
     
     @IBAction func flagImage(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Flag as inappropriate content", message: "", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Flag as inappropriate content?", message: "Did you find this post offensive?", preferredStyle: .actionSheet)
         
         let action = UIAlertAction(title: "This content is offensive", style: .default) { (UIAlertAction) in
             let alert2 = UIAlertController(title: "Thank you for your feedback", message: "We'll take it from here", preferredStyle: .alert)
@@ -65,8 +67,8 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
             let when = DispatchTime.now() + 1
             DispatchQueue.main.asyncAfter(deadline: when, execute: {
                 alert2.dismiss(animated: true, completion: nil)
-                self.flagButton.isEnabled = false
                 self.removeImage()
+                self.flagButton.isEnabled = false
             })
         }
         
@@ -148,10 +150,21 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
     @IBAction func updateCollectionView(_ sender: Any) {
         if (updateButton.titleLabel?.text == "New Collection"){
             
+            
             if(CoreDataManager.share.removeObjects((pin?.photo?.allObjects as! [Photos]))){
                 self.updateButton.isUserInteractionEnabled = false
                 loadNewImages()
+                self.updateButton.setTitle("Loading", for: .normal)
+                self.updateButton.isEnabled = false
+                let when = DispatchTime.now() + 1
+                DispatchQueue.main.asyncAfter(deadline: when) {
+                    self.updateButton.setTitle("New Collection", for: .normal)
+                    self.updateButton.isEnabled = true
+                }
+                
+                
                 self.updateButton.isUserInteractionEnabled = true
+                flagButton.isEnabled = false
             }
             return
         }
@@ -163,6 +176,7 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
         self.collectionView.reloadData()
         let randomPage = Int(arc4random_uniform(UInt32(20)))
         loadImage(page: "\(randomPage)")
+        flagButton.isEnabled = false
     }
     
     func removeImage(){
