@@ -155,15 +155,14 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
                 self.updateButton.isUserInteractionEnabled = false
                 loadNewImages()
                 self.updateButton.setTitle("Loading", for: .normal)
-                self.updateButton.isEnabled = false
-                let when = DispatchTime.now() + 1
+                self.updateButton.isUserInteractionEnabled = false
+                let when = DispatchTime.now() + 1.5
                 DispatchQueue.main.asyncAfter(deadline: when) {
                     self.updateButton.setTitle("New Collection", for: .normal)
-                    self.updateButton.isEnabled = true
+                    self.updateButton.isUserInteractionEnabled = true
                 }
                 
                 
-                self.updateButton.isUserInteractionEnabled = true
                 flagButton.isEnabled = false
             }
             return

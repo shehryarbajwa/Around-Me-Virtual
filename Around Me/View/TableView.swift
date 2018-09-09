@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-let list = ["User Agreement" , "Privacy Policy"]
+let list = ["User Agreement" , "Privacy Policy", "Location Services Update"]
 var myIndex = 0
 
 class TableViewClass : UIViewController , UITableViewDelegate, UITableViewDataSource {
@@ -33,8 +33,10 @@ class TableViewClass : UIViewController , UITableViewDelegate, UITableViewDataSo
         myIndex = indexPath.row
         if myIndex == 0 {
             performSegue(withIdentifier: "EULA", sender: self)
-        } else {
+        } else if myIndex == 1{
             performSegue(withIdentifier: "Privacy", sender: self)
+        } else {
+            performSegue(withIdentifier: "LocationServices", sender: self)
         }
         
     }

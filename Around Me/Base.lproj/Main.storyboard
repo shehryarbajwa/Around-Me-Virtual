@@ -564,6 +564,7 @@
                     <connections>
                         <segue destination="ssw-S2-gYh" kind="show" identifier="EULA" id="SVh-Yu-Rqb"/>
                         <segue destination="tCa-cS-pp4" kind="show" identifier="Privacy" id="5Av-X3-a7C"/>
+                        <segue destination="My0-vz-dn2" kind="show" identifier="LocationServices" id="ujF-XS-9nT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqN-tI-HrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -771,7 +772,48 @@ By email: shehryar.bajwa@gmail.com</mutableString>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8U-bf-jCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1360.8" y="2684.7076461769116"/>
+            <point key="canvasLocation" x="385" y="2903"/>
+        </scene>
+        <!--Location Disable View Controller-->
+        <scene sceneID="vio-DH-g0I">
+            <objects>
+                <viewController id="My0-vz-dn2" customClass="LocationDisableViewController" customModule="Around_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ezP-zV-z79">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1M-uJ-EnZ">
+                                <rect key="frame" x="16" y="294" width="343" height="81"/>
+                                <state key="normal" title="Enable/Disable"/>
+                                <connections>
+                                    <action selector="Enabledisable:" destination="My0-vz-dn2" eventType="touchUpInside" id="eSh-0m-1No"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C9T-Wa-YYe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="8pr-Af-mWa">
+                                        <barButtonItem key="rightBarButtonItem" title="Maps" id="6aH-f2-9OT">
+                                            <color key="tintColor" red="0.98823529409999999" green="0.66274509800000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f1M-uJ-EnZ" firstAttribute="top" secondItem="Mrm-pm-1vT" secondAttribute="top" constant="230" id="ZJD-rT-Jlm"/>
+                            <constraint firstItem="Mrm-pm-1vT" firstAttribute="bottom" secondItem="f1M-uJ-EnZ" secondAttribute="bottom" constant="292" id="cCA-zK-Q7f"/>
+                            <constraint firstItem="Mrm-pm-1vT" firstAttribute="trailing" secondItem="f1M-uJ-EnZ" secondAttribute="trailing" constant="16" id="eH4-q9-ROM"/>
+                            <constraint firstItem="f1M-uJ-EnZ" firstAttribute="leading" secondItem="Mrm-pm-1vT" secondAttribute="leading" constant="16" id="q7r-rx-vbo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mrm-pm-1vT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i49-fI-I8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1360.8" y="2901.4992503748126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Og-iH-zgp">

@@ -27,6 +27,7 @@
 		E654B8B8214531EB007E9A26 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E654B8B7214531EA007E9A26 /* TableView.swift */; };
 		E654B8BA214537DE007E9A26 /* EULAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E654B8B9214537DE007E9A26 /* EULAViewController.swift */; };
 		E654B8BC21453802007E9A26 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E654B8BB21453802007E9A26 /* PrivacyViewController.swift */; };
+		E654B8BE21454547007E9A26 /* LocationDisableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E654B8BD21454547007E9A26 /* LocationDisableViewController.swift */; };
 		E669F39B2131ED4D00F66769 /* FacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E669F39A2131ED4D00F66769 /* FacebookLoginViewController.swift */; };
 		E669F3AA21333BB000F66769 /* NSMutableArray+test.m in Sources */ = {isa = PBXBuildFile; fileRef = E669F3A921333BB000F66769 /* NSMutableArray+test.m */; };
 		E678F7C1212F3473007D5DC5 /* FlickrImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678F7C0212F3473007D5DC5 /* FlickrImagesViewController.swift */; };
@@ -86,6 +87,7 @@
 		E654B8B7214531EA007E9A26 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		E654B8B9214537DE007E9A26 /* EULAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EULAViewController.swift; sourceTree = "<group>"; };
 		E654B8BB21453802007E9A26 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		E654B8BD21454547007E9A26 /* LocationDisableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDisableViewController.swift; sourceTree = "<group>"; };
 		E669F39A2131ED4D00F66769 /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
 		E669F3A821333BB000F66769 /* NSMutableArray+test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+test.h"; sourceTree = "<group>"; };
 		E669F3A921333BB000F66769 /* NSMutableArray+test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+test.m"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				E6E09A31212D368B00557304 /* MapViewController.swift */,
 				E669F39A2131ED4D00F66769 /* FacebookLoginViewController.swift */,
 				E654B8B7214531EA007E9A26 /* TableView.swift */,
+				E654B8BD21454547007E9A26 /* LocationDisableViewController.swift */,
 				E654B8B9214537DE007E9A26 /* EULAViewController.swift */,
 				E654B8BB21453802007E9A26 /* PrivacyViewController.swift */,
 				E678F7C4212F5155007D5DC5 /* MapViewControllerExtensions.swift */,
@@ -398,6 +401,7 @@
 				E616589D2127B9E7008D895B /* Mappaa.xcdatamodeld in Sources */,
 				E61658CA2127E49A008D895B /* SF.swift in Sources */,
 				E6E6FE75212B424C002ADAE1 /* FlickrConvenience.swift in Sources */,
+				E654B8BE21454547007E9A26 /* LocationDisableViewController.swift in Sources */,
 				E669F39B2131ED4D00F66769 /* FacebookLoginViewController.swift in Sources */,
 				E61658972127B9E7008D895B /* Rome.swift in Sources */,
 				E61658952127B9E7008D895B /* AppDelegate.swift in Sources */,
