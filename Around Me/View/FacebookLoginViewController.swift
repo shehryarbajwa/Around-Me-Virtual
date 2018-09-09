@@ -37,7 +37,7 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
        login.delegate = self
         
-        if let token = FBSDKAccessToken.current(){
+        if (FBSDKAccessToken.current()) != nil{
             fetchRequest()
             let alert = UIAlertController(title: "Logging in", message: "", preferredStyle: .alert)
             let indicator = UIActivityIndicatorView(frame: alert.view.bounds)
@@ -54,6 +54,11 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                     self.performSegue(withIdentifier: "mapview", sender: self)
                 })
             }
+        } else {
+            let alert = UIAlertController(title: "Please login via Facebook before accessing Maps", message: "", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .destructive, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
         }
         
     }
@@ -65,15 +70,18 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         FBSDKGraphRequest.init(graphPath: "me", parameters: parameters).start { (connection, result, error) in
             if error != nil {
-                print(error)
-          }
+                print(error!)
+            }
+            
             if let result = result as? [String:String]{
-                let email : String = result["email"]!
+                let email : String? = result["email"]
                 print(email)
                 let firstname : String = result["first_name"]!
                 let lastname: String = result["last_name"]!
                 print(firstname)
                 print(lastname)
+            } else {
+                print("error connecting to Facebook")
             }
             
             
