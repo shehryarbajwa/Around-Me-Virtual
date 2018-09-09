@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 
+let list = ["User Agreement" , "Privacy Policy"]
+var myIndex = 0
+
 class TableViewClass : UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    let list = ["User Agreement" , "Privacy Policy"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (list.count)
@@ -24,6 +26,17 @@ class TableViewClass : UIViewController , UITableViewDelegate, UITableViewDataSo
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         cell.textLabel?.text = list[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        myIndex = indexPath.row
+        if myIndex == 0 {
+            performSegue(withIdentifier: "EULA", sender: self)
+        } else {
+            performSegue(withIdentifier: "Privacy", sender: self)
+        }
+        
     }
     
     
