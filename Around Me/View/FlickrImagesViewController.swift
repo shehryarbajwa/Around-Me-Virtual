@@ -58,17 +58,27 @@ class ImageSelectorViewController: UIViewController, MKMapViewDelegate{
     @IBAction func flagImage(_ sender: Any) {
         
         let alert = UIAlertController(title: "Flag as inappropriate content", message: "", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "The content is offensive", style: .default, handler: { (UIAlertAction) in
+        
+        let action = UIAlertAction(title: "This content is offensive", style: .default) { (UIAlertAction) in
             let alert2 = UIAlertController(title: "Thank you for your feedback", message: "We'll take it from here", preferredStyle: .alert)
-            self.present(alert2, animated: true, completion: self.removeImage)
-            
-            let when  = DispatchTime.now() + 1
+            self.present(alert2 , animated: true , completion: nil)
+            let when = DispatchTime.now() + 1
             DispatchQueue.main.asyncAfter(deadline: when, execute: {
                 alert2.dismiss(animated: true, completion: nil)
                 self.flagButton.isEnabled = false
+                self.removeImage()
             })
-        }))
+        }
+        
+        alert.addAction(action)
+        
+        if let popoverController = alert.popoverPresentationController {
+            popoverController.barButtonItem = sender as? UIBarButtonItem
+        }
+        
         self.present(alert, animated: true, completion: nil)
+        
+        
     }
     
     

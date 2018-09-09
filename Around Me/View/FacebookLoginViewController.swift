@@ -75,11 +75,8 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             
             if let result = result as? [String:String]{
                 let email : String? = result["email"]
-                print(email)
-                let firstname : String = result["first_name"]!
-                let lastname: String = result["last_name"]!
-                print(firstname)
-                print(lastname)
+                let firstname : String? = result["first_name"]
+                let lastname: String? = result["last_name"]
             } else {
                 print("error connecting to Facebook")
             }
